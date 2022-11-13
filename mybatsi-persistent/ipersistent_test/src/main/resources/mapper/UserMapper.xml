@@ -1,0 +1,18 @@
+<mapper namespace="User">
+
+    <!--    查询所有-->
+    <!--唯一标识：namespace.id  statementId-->
+    <!--查询所有-->
+    <!--
+        规范：接口的全路径要和namespace的值保持一致
+              接口中的方法名要和id的值保持一致
+    -->
+    <select id="selectList" resultType="com.yida.pojo.User">
+        select * from user
+    </select>
+
+    <!-- 根据条件查询-->
+    <select id="selectOne" resultType="com.yida.pojo.User" parameterType="com.yida.pojo.User">
+        select * from user where id = #{id} and username = #{username}
+    </select>
+</mapper>
