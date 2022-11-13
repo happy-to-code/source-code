@@ -13,4 +13,8 @@ public interface SqlSession {
 	
 	<E> E selectOne(String statementId, Object parameter) throws Exception;
 	
+	/**
+	 * 生成代理对象
+	 */
+	<T> T getMapper(Class<?> mapperClass);
 }
